@@ -162,8 +162,8 @@ int do_server(struct options *opts, struct sockaddr_in *proxy_addr)
             }
 
             // copy data from the client, print it on stdout
-            strncpy(buffer, packet.data, packet.data_length);
-            buffer[packet.data_length] = '\0';
+            strncpy(buffer, packet.data, packet.data_length + 1);
+            buffer[packet.data_length + 1] = '\0';
             fprintf(stdout, "\t%s\n", buffer);       
             fd = wiringPiI2CSetup(LCDAddr);
             init();
