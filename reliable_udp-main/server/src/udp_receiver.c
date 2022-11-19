@@ -114,6 +114,10 @@ int do_server(struct options *opts, struct sockaddr_in *proxy_addr)
     ssize_t nread;
     char buffer[MAX_DATA_LENGTH];
     fprintf(stdout, "[Listening on port %d]\n", opts->port_in); // NOLINT(cert-err33-c, concurrency-mt-unsafe)
+    fd = wiringPiI2CSetup(LCDAddr);
+    init();
+    writeToLCD(0, 0, "Msg Received:");
+    writeToLCD(0, 1, "");
     do
     {
         nread = recvfrom(opts->sock_fd, &packet, sizeof(rudp_packet_t), 0, (struct sockaddr *)proxy_addr, &from_addr_len);
@@ -162,7 +166,7 @@ int do_server(struct options *opts, struct sockaddr_in *proxy_addr)
             fprintf(stdout, "\t%s\n", buffer);       
             fd = wiringPiI2CSetup(LCDAddr);
             init();
-            writeToLCD(0, 0, buffer);
+            writeToLCD(0, 1, buffer);
 
             // send ACK
             init_rudp_header(RUDP_ACK, packet.header.seq_no, &response_packet_header);
