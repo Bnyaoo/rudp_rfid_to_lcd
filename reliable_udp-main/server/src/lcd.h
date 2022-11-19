@@ -1,7 +1,3 @@
-//
-// Created by Shik Hur on 2022-10-28.
-//
-
 #ifndef UDP_SERVER_UDP_LCD_H
 #define UDP_SERVER_UDP_LCD_H
 
