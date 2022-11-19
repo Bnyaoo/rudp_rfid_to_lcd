@@ -1,8 +1,3 @@
-//
-// Created by Shik Hur on 2022-10-28.
-//
-
-
 #include "rudp_types.h"
 #include <stdlib.h>
 #include <string.h>

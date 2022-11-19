@@ -1,5 +1,3 @@
-
-
 #include "error.h"
 #include "udp_sender.h"
 #include <netinet/in.h>

@@ -1,7 +1,3 @@
-//
-// Created by Shik Hur on 2022-10-28.
-//
-
 #ifndef UDP_CLIENT_RUDP_TYPES_H
 #define UDP_CLIENT_RUDP_TYPES_H
 

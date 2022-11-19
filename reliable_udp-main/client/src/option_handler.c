@@ -1,8 +1,3 @@
-//
-// Created by Shik Hur on 2022-10-28.
-//
-
-
 #include "conversion.h"
 #include "option_handler.h"
 #include <assert.h>

@@ -1,7 +1,3 @@
-//
-// Created by Shik Hur on 2022-10-28.
-//
-
 #ifndef UDP_CLIENT_OPTION_HANDLER_H
 #define UDP_CLIENT_OPTION_HANDLER_H
 

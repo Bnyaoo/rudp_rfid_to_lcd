@@ -1,8 +1,3 @@
-//
-// Created by Shik Hur on 2022-10-28.
-//
-
-
 #include "udp_receiver.h"
 #include <stdio.h>
 #include <stdlib.h>
