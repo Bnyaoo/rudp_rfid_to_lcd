@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(udp_server
+project(server
         VERSION 0.0.1
         DESCRIPTION ""
         LANGUAGES C)
@@ -10,9 +10,9 @@ set(CMAKE_C_STANDARD 17)
 set(SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
 set(INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 set(SOURCE_LIST ${SOURCE_DIR}/main.c ${SOURCE_DIR}/conversion.c ${SOURCE_DIR}/error.c ${SOURCE_DIR}/option_handler.c
-        ${SOURCE_DIR}/rudp_types.c ${SOURCE_DIR}/udp_receiver.c)
+        ${SOURCE_DIR}/rudp_types.c ${SOURCE_DIR}/udp_receiver.c ${SOURCE_DIR}/lcd.c)
 set(HEADER_LIST ${INCLUDE_DIR}/conversion.h ${INCLUDE_DIR}/error.h ${INCLUDE_DIR}/option_handler.h
-        ${INCLUDE_DIR}/rudp_types.h ${INCLUDE_DIR}/udp_receiver.h)
+        ${INCLUDE_DIR}/rudp_types.h ${INCLUDE_DIR}/udp_receiver.h ${INCLUDE_DIR}/lcd.h)
 
 set(SANITIZE TRUE)
 

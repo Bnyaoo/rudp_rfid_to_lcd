@@ -10,6 +10,17 @@
 #include "option_handler.h"
 #include "rudp_types.h"
 
+void write_word(int data);
+
+void send_command(int comm);
+
+void send_data(int data);
+
+void init();
+
+void clear();
+
+void writeToLCD(int x, int y, char data[]);
 
 /**
  * Set an ip address and port number to be used to a socket.
