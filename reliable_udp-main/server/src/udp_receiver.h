@@ -16,7 +16,7 @@ void send_command(int comm);
 
 void send_data(int data);
 
-void init();
+void set_LCDaddr_fd();
 
 void clear();
 

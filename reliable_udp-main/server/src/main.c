@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         fatal_message(__FILE__, __func__, __LINE__, "[FAIL] socket", EXIT_FAILURE);
     }
 
-    // init addr
+    // set_LCDaddr_fd addr
     result = init_sockaddr(&addr, &opts);
     if (result != 0)
     {

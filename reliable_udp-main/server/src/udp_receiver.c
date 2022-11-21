@@ -56,7 +56,7 @@ void send_data(int data){
 	write_word(buf);
 }
 
-void init(){
+void set_LCDaddr_fd(){
 	send_command(0x33);	// Must initialize to 8-line mode at first
 	delay(5);
 	send_command(0x32);	// Then initialize to 4-line mode
@@ -115,7 +115,7 @@ int do_server(struct options *opts, struct sockaddr_in *proxy_addr)
     char buffer[MAX_DATA_LENGTH];
     fprintf(stdout, "[Listening on port %d]\n", opts->port_in); // NOLINT(cert-err33-c, concurrency-mt-unsafe)
     fd = wiringPiI2CSetup(LCDAddr);
-    init();
+    set_LCDaddr_fd();
     writeToLCD(0, 0, "Msg Received:");
     writeToLCD(0, 1, "");
     do
@@ -165,7 +165,7 @@ int do_server(struct options *opts, struct sockaddr_in *proxy_addr)
             buffer[packet.data_length + 1] = '\0';
             fprintf(stdout, "\t%s\n", buffer);       
             fd = wiringPiI2CSetup(LCDAddr);
-            init();
+            set_LCDaddr_fd();
             writeToLCD(0, 1, buffer);
 
             // send ACK
